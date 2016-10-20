@@ -2,6 +2,11 @@
 Reports notifications live from Nagios monitoring and displays them on an AtomJump messaging forum
 
 
+Firstly 'git clone' the plugin into your AtomJump Loop Server plugins folder. Copy config/configORIGINAL.json to config/config.json.
+
+Edit the config.json, with the settings suitable for your installation.
+
+
 In the file:
 /usr/local/nagios/etc/objects/commands.cfg
 
@@ -37,4 +42,10 @@ define command{
 	command_name	notify-service-by-email
 	command_line	/usr/bin/printf "%b" "***** Nagios *****\n\nNotification Type: $NOTIFICATIONTYPE$\n\nService: $SERVICEDESC$\nHost: $HOSTALIAS$\nAddress: $HOSTADDRESS$\nState: $SERVICESTATE$\n\nDate/Time: $LONGDATETIME$\n\nAdditional Info:\n\n$SERVICEOUTPUT$\n" | /usr/bin/php /your_server_path/plugins/nags_reporter/index.php "** $NOTIFICATIONTYPE$ Service Alert: $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$ **"
 	}
+```
+
+then 
+
+```
+sudo service nagios reload
 ```
