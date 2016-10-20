@@ -47,6 +47,7 @@
 	
 
 
+	echo $message;
 			  
 			  
 			  
