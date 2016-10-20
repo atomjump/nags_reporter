@@ -2,5 +2,6 @@
     "serverPath": "your_path/loop-server/",
 	"name": "Sender Name",
 	"email": "email@test.com",
-	"forum": "aj_unique_forum_name"
+	"forum": "aj_unique_forum_name",
+	"staging": true
 }

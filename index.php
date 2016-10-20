@@ -28,8 +28,7 @@
 
  	$start_path = $nags_reporter_config['serverPath'];
 
-	echo $start_path;
-	$staging = true;		//REMOVE ME ON LIVE
+	$staging = $nags_reporter_config['staging'];		
 	include_once($start_path . 'config/db_connect.php');	
 	
 	$define_classes_path = $start_path;     //This flag ensures we have access to the typical classes, before the cls.pluginapi.php is included
@@ -45,16 +44,6 @@
 	}
 	
 
-
-	echo $message;
-			  
-			  
-			  
-			  
-			  
-
-						
-
 	 $shouted = $message;		//guid may not be url for some feeds, may need to have link
 	 $your_name = $nags_reporter_config['name'];
 	 $whisper_to = "";		//to the whole forum
@@ -68,15 +57,8 @@
 	
 	 //Send the message
 	 $api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], false);
-												
-				
-					
-			
-			  
 
 	session_destroy();  //remove session
-	
-	
 	
 	
 ?>
