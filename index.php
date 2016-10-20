@@ -28,7 +28,7 @@
 
  	$start_path = $nags_reporter_config['serverPath'];
 
-	
+	echo $start_path;
 	
 	$notify = false;
 	include_once($start_path . 'config/db_connect.php');	
