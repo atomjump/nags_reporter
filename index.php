@@ -39,7 +39,7 @@
 	
 	
 	if($argc >= 1) {
-		$message = intval($argv[1]);
+		$message = strval($argv[1]);
 	} else {
 		$message = "";
 	}
