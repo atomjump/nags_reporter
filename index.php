@@ -29,8 +29,7 @@
  	$start_path = $nags_reporter_config['serverPath'];
 
 	echo $start_path;
-	
-	$notify = false;
+	$staging = true;		//REMOVE ME ON LIVE
 	include_once($start_path . 'config/db_connect.php');	
 	
 	$define_classes_path = $start_path;     //This flag ensures we have access to the typical classes, before the cls.pluginapi.php is included
