@@ -53,10 +53,12 @@
 
 
  	 //Get the forum id
-     $forum_info = $api->get_forum_id($forum_name);
+     	 $forum_info = $api->get_forum_id($forum_name);
 	
 	 //Send the message
-	 $api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], false);
+	 $options = array('always_send_email' => true,
+			 'notification' => true);
+	 $api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], $options);
 
 	session_destroy();  //remove session
 	
