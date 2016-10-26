@@ -28,7 +28,9 @@
 
  	$start_path = $nags_reporter_config['serverPath'];
 
-	$staging = $nags_reporter_config['staging'];		
+	$staging = $nags_reporter_config['staging'];	
+	
+	echo "Start path: " . $start_path;	
 	include_once($start_path . 'config/db_connect.php');	
 	
 	$define_classes_path = $start_path;     //This flag ensures we have access to the typical classes, before the cls.pluginapi.php is included
