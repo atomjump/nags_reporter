@@ -46,7 +46,7 @@
 
 	 $shouted = $message;		//guid may not be url for some feeds, may need to have link
 	 $your_name = $nags_reporter_config['name'];
-	 $whisper_to = null;		//to the whole forum
+	 $whisper_to = "";		//to the whole forum
 	 $email = $nags_reporter_config['email'];
 	 $ip = "92.27.10.17"; //must be something anything
 	 $forum_name = $nags_reporter_config['forum'];
@@ -60,6 +60,7 @@
 			 'notification' => true);
 	 $api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], $options);
 
+	 $api->complete_parallel_calls();
 	session_destroy();  //remove session
 	
 	
