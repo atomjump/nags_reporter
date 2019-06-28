@@ -4,6 +4,15 @@
 	//		
 	//		/usr/bin/php /your_server_path/plugins/nags_reporter/index.php "your message here"
 
+	function trim_trailing_slash_local($str) {
+        return rtrim($str, "/");
+    }
+    
+    function add_trailing_slash_local($str) {
+        //Remove and then add
+        return rtrim($str, "/") . '/';
+    }
+
 
 	if(!isset($nags_reporter_config)) {
         //Get global plugin config - but only once
@@ -26,7 +35,7 @@
 
 
 
- 	$start_path = $nags_reporter_config['serverPath'];
+ 	$start_path = add_trailing_slash_local($nags_reporter_config['serverPath']);
 
 	$staging = $nags_reporter_config['staging'];	
 	
