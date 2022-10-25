@@ -2,7 +2,7 @@
 Reports notifications live from Nagios monitoring and displays them on an AtomJump messaging forum
 
 
-Firstly 'git clone' the plugin into your AtomJump Loop Server plugins folder, into the 'nags_reporter' folder. Copy the plugin's config/configORIGINAL.json to config/config.json.
+Firstly 'git clone' the plugin into your AtomJump Messaging Server plugins folder, into the 'nags_reporter' folder. Copy the plugin's config/configORIGINAL.json to config/config.json.
 
 Edit the config.json, with the settings suitable for your installation.
 
