@@ -1,4 +1,7 @@
 # nags_reporter
+
+__WARNING: this project has now moved to https://src.atomjump.com/atomjump/nags_reporter.git__
+
 Reports notifications live from Nagios monitoring and displays them on an AtomJump messaging forum
 
 
